@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [advanced selenium suite]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="listeners.CustomListeners"/>
+  </listeners>
+  <test thread-count="5" name="LoginTest(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="testcases.LoginTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="lg11_loginFailed"/>
+          <include name="lg1_loginFailed"/>
+        </methods>
+      </class> <!-- testcases.LoginTest -->
+    </classes>
+  </test> <!-- LoginTest(failed) -->
+</suite> <!-- Failed suite [advanced selenium suite] -->
