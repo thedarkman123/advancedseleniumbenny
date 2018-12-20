@@ -84,6 +84,49 @@ public class WebDriverWrapper {
 		}
 	}
 
+	
+	public List<WebElement> getElementsByType(String value,FINDTYPE type,CONDITIONTYPE condition) {
+		String txtForLog = "";
+		List<WebElement> elements = null;
+		
+		By by = null;
+		if (type == FINDTYPE.XPATH) {
+			txtForLog += "Find Elements By Xpath: ";
+			by = By.xpath(value);
+		} else if(type == FINDTYPE.TAG) {
+			txtForLog += "Find Elements By Tag: ";
+			by = By.tagName(value);
+		} else if(type == FINDTYPE.CSS) {
+			txtForLog += "Find Elements By CSSELECTOR: ";
+			by = By.cssSelector(value);
+		}
+		
+		txtForLog += value;
+		
+		try {
+			WebDriverWait driverWait = new WebDriverWait(wb, 10, 1000);
+			if (condition == CONDITIONTYPE.PRESENT) {
+				txtForLog += " When present";
+				elements = driverWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));	
+			} else if (condition == CONDITIONTYPE.VISIBLE) {
+				txtForLog += " When visible";
+				elements = driverWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(by));
+			}
+		} catch (Exception e) {
+			txtForLog += " Failed: " + e.getMessage();
+			Reporter.log(txtForLog);
+			TestUtils.test.log(LogStatus.INFO, txtForLog);
+			e.printStackTrace();
+		}
+
+		if (elements == null) {
+			Assert.fail();
+		}
+		
+		TestUtils.test.log(LogStatus.INFO, txtForLog);
+		Reporter.log(txtForLog);
+		return elements;
+	}
 	//explicit wait find
 	public WebElement getElementByType(String value, FINDTYPE type, CONDITIONTYPE condition) {
 		String txtForLog = "";
@@ -92,16 +135,16 @@ public class WebDriverWrapper {
 		By by = null;
 
 		if (type == FINDTYPE.XPATH) {
-			txtForLog += "Find By Xpath: ";
+			txtForLog += "Find Element By Xpath: ";
 			by = By.xpath(value);
 		} else if (type == FINDTYPE.ID) {
-			txtForLog += "Find By Id: ";
+			txtForLog += "Find Element By Id: ";
 			by = By.id(value);
 		} else if(type == FINDTYPE.TAG) {
-			txtForLog += "Find By Tag: ";
+			txtForLog += "Find Element By Tag: ";
 			by = By.tagName(value);
 		} else if(type == FINDTYPE.CSS) {
-			txtForLog += "Find By CSSELECTOR: ";
+			txtForLog += "Find Element By CSSELECTOR: ";
 			by = By.cssSelector(value);
 		}
 		
@@ -158,26 +201,25 @@ public class WebDriverWrapper {
 		s.selectByIndex(choiceNum);
 	}
 	
-	public List<WebElement> getElements(String value) {
-		List<WebElement> elements = null;
-		By by = By.xpath(value);
-		try {
-			WebDriverWait driverWait = new WebDriverWait(wb, 10, 1000);
-			//default
-			elements = driverWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(by));
-
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		if (elements == null) {
-			Assert.fail();
-		}
-
-		return elements;
+	//a facade for many elements
+	public List<WebElement> getVisibleElementsByXpath(String xpath) {
+		return getElementsByType(xpath,FINDTYPE.XPATH,CONDITIONTYPE.VISIBLE);
 	}
 	
+	public List<WebElement> getPresentElementsByXpath(String xpath) {
+		return getElementsByType(xpath,FINDTYPE.XPATH,CONDITIONTYPE.PRESENT);
+	}
+	
+	public List<WebElement> getVisibleElementsByCssSelector(String cssSelector) {
+		return getElementsByType(cssSelector,FINDTYPE.CSS,CONDITIONTYPE.VISIBLE);
+	}
+	
+	public List<WebElement> getPresentElementsByCssSelector(String cssSelector) {
+		return getElementsByType(cssSelector,FINDTYPE.CSS,CONDITIONTYPE.PRESENT);
+	}
+	
+	
+	//a facade for one element
 	public WebElement getVisibleElementById(String id) {
 		return getElementByType(id,FINDTYPE.ID,CONDITIONTYPE.VISIBLE);
 	}

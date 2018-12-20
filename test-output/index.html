@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-advanced_selenium_suite">
-              <span class="suite-name border-failed">advanced selenium suite</span>
+              <span class="suite-name border-passed">advanced selenium suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,26 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-advanced_selenium_suite" class="hide-methods failed suite-advanced_selenium_suite"> (hide)</a> <!-- hide-methods failed suite-advanced_selenium_suite -->
-                      <a href="#" panel-name="suite-advanced_selenium_suite" class="show-methods failed suite-advanced_selenium_suite"> (show)</a> <!-- show-methods failed suite-advanced_selenium_suite -->
-                    </span>
-                    <div class="method-list-content failed suite-advanced_selenium_suite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-advanced_selenium_suite" title="testcases.LoginTest" hash-for-method="lg11_loginFailed">lg11_loginFailed</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-advanced_selenium_suite" title="testcases.LoginTest" hash-for-method="lg1_loginFailed">lg1_loginFailed</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-advanced_selenium_suite -->
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -121,7 +102,7 @@
                     <div class="method-list-content passed suite-advanced_selenium_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-advanced_selenium_suite" title="testcases.LoginTest" hash-for-method="lg2_loginSucced">lg2_loginSucced</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-advanced_selenium_suite" title="testcases.AddToCartTest" hash-for-method="addToCartCancel">addToCartCancel</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-advanced_selenium_suite -->
@@ -136,47 +117,17 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-advanced_selenium_suite" class="panel advanced_selenium_suite">
-          <div class="suite-advanced_selenium_suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">testcases.LoginTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="lg11_loginFailed">
-                  </a> <!-- lg11_loginFailed -->
-                  <span class="method-name">lg11_loginFailed</span>
-                  <div class="stack-trace">java.lang.AssertionError: Failed That Fuck 2
-	at testcases.LoginTest.lg11_loginFailed(LoginTest.java:21)
-... Removed 26 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="lg1_loginFailed">
-                  </a> <!-- lg1_loginFailed -->
-                  <span class="method-name">lg1_loginFailed</span>
-                  <div class="stack-trace">java.lang.AssertionError: Failed That Fuck
-	at testcases.LoginTest.lg1_loginFailed(LoginTest.java:14)
-... Removed 26 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-advanced_selenium_suite-class-failed -->
           <div class="suite-advanced_selenium_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testcases.LoginTest</span>
+              <span class="class-name">testcases.AddToCartTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="lg2_loginSucced">
-                  </a> <!-- lg2_loginSucced -->
-                  <span class="method-name">lg2_loginSucced</span>
+                  <a name="addToCartCancel">
+                  </a> <!-- addToCartCancel -->
+                  <span class="method-name">addToCartCancel</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -199,7 +150,7 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;LoginTest&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testcases.LoginTest&quot;/&gt;
+      &lt;class name=&quot;testcases.AddToCartTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- LoginTest --&gt;
 &lt;/suite&gt; &lt;!-- advanced selenium suite --&gt;
@@ -239,24 +190,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'lg2_loginSucced')
-data.setCell(0, 2, 'testcases.LoginTest')
-data.setCell(0, 3, 4226);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'lg11_loginFailed')
-data.setCell(1, 2, 'testcases.LoginTest')
-data.setCell(1, 3, 2443);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'lg1_loginFailed')
-data.setCell(2, 2, 'testcases.LoginTest')
-data.setCell(2, 3, 2236);
+data.setCell(0, 1, 'addToCartCancel')
+data.setCell(0, 2, 'testcases.AddToCartTest')
+data.setCell(0, 3, 4989);
 window.suiteTableData['advanced_selenium_suite']= { tableData: data, tableDiv: 'times-div-advanced_selenium_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-advanced_selenium_suite">
               </div> <!-- times-div-advanced_selenium_suite -->
             </div> <!-- times-div -->
@@ -268,46 +211,39 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">lg2_loginSucced</span>
+              <span class="reporter-method-name">addToCartCancel</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Find By CSSELECTOR: [data-test='username'] When present</span>
+                <span class="reporter-method-output">Find Element By CSSELECTOR: [data-test='username'] When present</span>
                 <span class="reporter-method-output">Clearing</span>
                 <span class="reporter-method-output">Typing: standard_user</span>
-                <span class="reporter-method-output">Find By CSSELECTOR: [data-test='password'] When present</span>
+                <span class="reporter-method-output">Find Element By CSSELECTOR: [data-test='password'] When present</span>
                 <span class="reporter-method-output">Clearing</span>
                 <span class="reporter-method-output">Typing: secret_sauce</span>
-                <span class="reporter-method-output">Find By CSSELECTOR: .login-button When present</span>
+                <span class="reporter-method-output">Find Element By CSSELECTOR: .login-button When present</span>
                 <span class="reporter-method-output">Clicking</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">lg1_loginFailed</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Find By CSSELECTOR: [data-test='username'] When present</span>
-                <span class="reporter-method-output">Clearing</span>
-                <span class="reporter-method-output">Typing: standard_user</span>
-                <span class="reporter-method-output">Find By CSSELECTOR: [data-test='password'] When present</span>
-                <span class="reporter-method-output">Clearing</span>
-                <span class="reporter-method-output">Typing: 111</span>
-                <span class="reporter-method-output">Find By CSSELECTOR: .login-button When present</span>
+                <span class="reporter-method-output">Find Elements By CSSELECTOR: .inventory_item When present</span>
                 <span class="reporter-method-output">Clicking</span>
-                <span class="reporter-method-output">lg1_loginFailed failed: Failed That Fuck</span>
-                <span class="reporter-method-output"><a target="_blank" href=C:\Users\benny\eclipse-workspace\advancedbenny\src\test\resources\screenshots\chrome\lg1_loginFailedThu_Dec_20_00_23_31_IST_2018.png>Screenshot</a></span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">lg11_loginFailed</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Find By CSSELECTOR: [data-test='username'] When present</span>
-                <span class="reporter-method-output">Clearing</span>
-                <span class="reporter-method-output">Typing: standard_user</span>
-                <span class="reporter-method-output">Find By CSSELECTOR: [data-test='password'] When present</span>
-                <span class="reporter-method-output">Clearing</span>
-                <span class="reporter-method-output">Typing: 333</span>
-                <span class="reporter-method-output">Find By CSSELECTOR: .login-button When present</span>
+                <span class="reporter-method-output">Find Elements By CSSELECTOR: .inventory_item When present</span>
                 <span class="reporter-method-output">Clicking</span>
-                <span class="reporter-method-output">lg11_loginFailed failed: Failed That Fuck 2</span>
-                <span class="reporter-method-output"><a target="_blank" href=C:\Users\benny\eclipse-workspace\advancedbenny\src\test\resources\screenshots\chrome\lg11_loginFailedThu_Dec_20_00_23_28_IST_2018.png>Screenshot</a></span>
+                <span class="reporter-method-output">Find Element By CSSELECTOR: .shopping_cart_link path When present</span>
+                <span class="reporter-method-output">Clicking</span>
+                <span class="reporter-method-output">Find Element By CSSELECTOR: .cart_checkout_link When present</span>
+                <span class="reporter-method-output">Clicking</span>
+                <span class="reporter-method-output">Find Element By CSSELECTOR: [data-test='firstName'] When present</span>
+                <span class="reporter-method-output">Clearing</span>
+                <span class="reporter-method-output">Typing: gal</span>
+                <span class="reporter-method-output">Find Element By CSSELECTOR: [data-test='lastName'] When present</span>
+                <span class="reporter-method-output">Clearing</span>
+                <span class="reporter-method-output">Typing: ester</span>
+                <span class="reporter-method-output">Find Element By CSSELECTOR: [data-test='postalCode'] When present</span>
+                <span class="reporter-method-output">Clearing</span>
+                <span class="reporter-method-output">Typing: 555</span>
+                <span class="reporter-method-output">Find Element By CSSELECTOR: .cart_checkout_link When present</span>
+                <span class="reporter-method-output">Clicking</span>
+                <span class="reporter-method-output">Find Element By CSSELECTOR: .cart_cancel_link When present</span>
+                <span class="reporter-method-output">Clicking</span>
+                <span class="reporter-method-output">Find Element By CSSELECTOR: .fa-layers-counter.shopping_cart_badge When present</span>
+                <span class="reporter-method-output">Find Element By CSSELECTOR: .fa-layers-counter.shopping_cart_badge When present</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -325,30 +261,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testcases.LoginTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testcases.AddToCartTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">lg11_loginFailed</span>
-                <span class="method-start">5712 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">lg1_loginFailed</span>
-                <span class="method-start">8775 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">lg2_loginSucced</span>
-                <span class="method-start">11376 ms</span>
+                <span class="method-name">addToCartCancel</span>
+                <span class="method-start">5648 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">15637 ms</span>
+                <span class="method-start">10953 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

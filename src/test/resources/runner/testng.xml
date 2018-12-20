@@ -9,7 +9,7 @@
   <test name="LoginTest">
 	  <parameter name="browser" value="chrome">
 		   <classes>
-		      <class name="testcases.LoginTest"/>
+		      <class name="testcases.AddToCartTest"/>
 		   </classes>
 	  </parameter>
   </test> 
